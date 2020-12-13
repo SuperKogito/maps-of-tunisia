@@ -40,157 +40,6 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta content="https://superkogito.github.io/_static/meta_ws_img.png" property="og:image" />
   <meta charset="utf-8" />
-  <style>
-      body
-      {
-        background-color:#f2f2f2;
-        font-family: 'RobotoDraft', 'Roboto', sans-serif;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      *
-      {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-
-      h5
-      {
-        margin:0px;
-        font-size:1.4em;
-        font-weight:700;
-      }
-
-      p
-      {
-        font-size:12px;
-      }
-
-      .center
-      {
-        height:100vh;
-        width:100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      /* End Non-Essential  */
-
-      .property-card
-      {
-        height:30em;
-        width:15em;
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
-        -webkit-box-orient:vertical;
-        -webkit-box-direction:normal;
-        -ms-flex-direction:column;
-        flex-direction:column;
-        position:relative;
-        -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-        -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-        transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-        border-radius:16px;
-        overflow:hidden;
-        -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
-        box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
-        margin: 15px 15px;
-      }
-      /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
-
-      /* Top Half of card, image. */
-
-      .property-image
-      {
-        height:20em;
-        width:12em;
-        padding:1em 2em;
-        position:Absolute;
-        top:0px;
-        -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-        -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-        transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-        background-size:cover;
-        background-repeat:no-repeat;
-      }
-
-      /* Bottom Card Section */
-
-      .property-description
-      {
-        background-color: #FAFAFC;
-        height:12em;
-        width:14em;
-        position:absolute;
-        bottom:0em;
-        -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-        -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-        transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-        padding: 0.5em 1em;
-        text-align:center;
-      }
-
-      /* Social Icons */
-
-      .property-social-icons
-      {
-        width:1em;
-        height:1em;
-        background-color:black;
-        position:absolute;
-        bottom:1em;
-        left:1em;
-        -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-        -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-        transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-      }
-
-      /* Property Cards Hover States */
-
-      .property-card:hover .property-description
-      {
-        height:0em;
-        padding:0px 1em;
-      }
-      .property-card:hover .property-image
-      {
-        height:18em;
-      }
-
-      .property-card:hover .property-social-icons
-      {
-        background-color:white;
-      }
-
-      .property-card:hover .property-social-icons:hover
-      {
-        background-color:blue;
-        cursor:pointer;
-      }
-
-
-      /* Optional
-
-      .property-image-title
-      {
-      text-align:center;
-      position:Relative;
-      top:30%;
-      opacity:0;
-      transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-      color:black;
-      font-size:1.2em;
-      }
-
-      .property-card:hover .property-image-title
-      {
-      opacity:1;
-      }
-
-      */
-  </style>
 </head>
 
 <body>
@@ -248,45 +97,40 @@
         </tbody></table>
         </div>
 
+        <div class="map" style="border-bottom:1px solid">
+            <p class="map-title" style="text-align: center; font-size: 24px;margin-top: 1em;">The Poverty Rate in Tunisia (2020)</p>
+            <p class="map-title" style="text-align: center; font-size: 24px;margin-bottom: 1em;">(معدل الفقر في تونس (2020</p>
 
-        <div class="center">
-          <div class="property-card">
-            <a href="poverty.html">
-              <div class="property-image" style="background-image:url('_static/imgs/poverty_cover_img.png');">
-                <div class="property-image-title">
-                  <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+           <table class="viztable">
+              <tr>
+                 <th class="c1"> <div class="map-graph"></div> </th>
+
+                <th class="c2"  style="display:inline-table">
+                <br>
+
+                <table>
+                  <tr><th>*Click on the map to zoom in and out       </th><th> <text style="direction:rtl;">انقر على الخريطة للتكبير والتصغير*</text></th></tr>
+                  <tr><th>*Hover on the maps to display informations </th><th> <text style="direction:rtl;">قم بتحريك موشر الفارة لرؤية المعلومات*</text></th></tr>
+                </table>
+
+                <br>
+                <div class="map-buttons"></div>
+                <br>
+                <div id="map-description">
+                    <p>
+                      This interactive map represtns the poverty rates in Tunisia and is based on the data prepared by the National Institute of Statistics (INS) of Tunisia, in collaboration with the World Bank.
+                      The poverty indicators presented in the released report were calculated on the basis of data from the General Population and Housing Census of 2014 and the National Survey on the Budget, Consumption and Household Standard of Living.
+                      The calculation methodology, developed by C. Elbers, J. Lanjouw and P. Lanjouw, makes it possible to estimate poverty and inequalities linked to consumption at fairly fine levels of disaggregation, by combining information from censuses and Household consumption surveys.
+                    </p>
+                    <br>
+                    <p style="direction:rtl;">
+هذه الخريطة التفاعلية تصور معدلات الفقر في تونس وتستند إلى البيانات التي أعدها المعهد الوطني للإحصاء في تونس ، بالتعاون مع البنك الدولي. تم حساب مؤشرات الفقر الواردة في التقرير الصادر على أساس بيانات التعداد العام للسكان والمساكن لعام 2014 والمسح الوطني للميزانية والاستهلاك ومستوى المعيشة الأسري. منهجية الحساب ، التي طورها C. Elbers و J. Lanjouw و P. Lanjouw ، تجعل من الممكن تقدير الفقر وعدم المساواة المرتبطة بالاستهلاك على مستويات جيدة إلى حد ما من التصنيف ، من خلال الجمع بين المعلومات من التعدادات والدراسات الاستقصائية عن الاستهلاك الأسري.
+                    </p>
                 </div>
-              </div></a>
-            <div class="property-description">
-              <h5> Poverty in Tunisia. </h5>
-              <p>Poverty in Tunisia.</p>
-            </div>
-            <a href="poverty.html">
-              <div class="property-social-icons">
-                <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-              </div>
-            </a>
-          </div>
-
-           <div class="property-card">
-            <a href="population.html">
-              <div class="property-image" style="background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');">
-                <div class="property-image-title">
-                  <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
-                </div>
-              </div></a>
-            <div class="property-description">
-              <h5> Population in Tunisia. </h5>
-              <p> Population in Tunisia.</p>
-            </div>
-            <a href=population.html">
-              <div class="property-social-icons">
-                <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-              </div>
-            </a>
-          </div>
-
-        </div>
+                </th>
+             </tr>
+        </table>
+      </div>
 
 
       </div>
@@ -305,7 +149,7 @@
   <script src="https://d3js.org/d3.v3.min.js"></script>
   <script src="https://d3js.org/topojson.v1.min.js"></script>
   <script src="_static/js/d3-tip.js"></script>
-  <script src="_static/js/main.js"></script>
+  <script src="_static/js/poverty.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.0.1/spin.min.js" type="text/javascript"></script>
   <script src="https://d3js.org/d3.v4.min.js" type="text/javascript"></script>
